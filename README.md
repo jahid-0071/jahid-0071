@@ -36,7 +36,7 @@
 
 <!-- ===================== ABOUT ===================== -->
 <div align="center">
-  <img src="./assets/about-me.svg" width="100%" alt="About Me">
+  <img src="./assets/about.svg" width="100%" alt="About Me">
 </div>
 <!-- ===================== TECH STACK ===================== -->
 
