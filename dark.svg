@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="430" viewBox="0 0 1000 430" role="img" aria-labelledby="title desc">
+<title id="title">Md. Jahid Hasan — animated developer terminal</title>
+<desc id="desc">A cyan and purple neon terminal card with an ASCII-inspired line-art portrait and developer information.</desc>
+<defs>
+  <linearGradient id="border" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#00E5FF"/><stop offset="1" stop-color="#A78BFA"/></linearGradient>
+  <linearGradient id="wash" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#00E5FF" stop-opacity=".12"/><stop offset="1" stop-color="#A78BFA" stop-opacity=".10"/></linearGradient>
+  <filter id="glow"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <clipPath id="clip"><rect x="13" y="13" width="974" height="404" rx="22"/></clipPath>
+</defs>
+<rect width="1000" height="430" rx="26" fill="#070B14"/>
+<rect x="4" y="4" width="992" height="422" rx="25" fill="none" stroke="url(#border)" stroke-width="3"/>
+<g clip-path="url(#clip)">
+  <rect x="13" y="13" width="974" height="404" fill="#0B1220"/>
+  <rect x="13" y="13" width="974" height="58" fill="#070B14"/>
+  <circle cx="43" cy="42" r="7" fill="#FF5F57"/><circle cx="68" cy="42" r="7" fill="#FEBC2E"/><circle cx="93" cy="42" r="7" fill="#28C840"/>
+  <text x="130" y="48" font-family="monospace" font-size="19" fill="#8FA8C9">jahid@developer-terminal: ~</text>
+  <text x="953" y="48" text-anchor="end" font-family="monospace" font-size="14" fill="#00E5FF">● ONLINE</text>
+  <path d="M13 72H987" stroke="#16243A" stroke-width="2"/>
+  <rect x="34" y="94" width="330" height="294" rx="16" fill="#070B14" stroke="#16243A"/>
+  <text x="54" y="124" font-family="monospace" font-size="15" fill="#A78BFA">$ render --portrait</text>
+  <!-- ASCII-inspired line-art portrait -->
+  <g fill="none" stroke="#00E5FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)">
+    <path d="M126 219 C115 174 142 145 193 145 C242 145 267 176 255 224"/>
+    <path d="M136 205 C130 177 148 157 173 153 M244 203 C248 176 232 157 211 153" opacity=".7"/>
+    <path d="M151 204 C151 179 166 164 193 164 C220 164 236 181 235 207 L230 244 C224 270 210 284 193 284 C174 284 160 268 155 244Z"/>
+    <path d="M160 211 Q174 202 185 211 M201 211 Q214 202 226 211"/>
+    <path d="M178 237 Q193 246 208 237" stroke="#A78BFA"/>
+    <path d="M193 215 L188 231 L196 233"/>
+    <path d="M145 198 Q135 240 150 267 M241 197 Q252 238 237 268" opacity=".7"/>
+    <path d="M143 303 Q193 273 243 303 L268 369 H118Z"/>
+    <path d="M166 294 L193 322 L220 294 M193 322 V367" stroke="#A78BFA"/>
+  </g>
+  <g fill="#8FA8C9" font-family="monospace" font-size="11">
+    <text x="54" y="375">[ CYAN LINE-ART / ASCII INSPIRED ]</text>
+  </g>
+  <rect x="386" y="94" width="580" height="294" rx="16" fill="url(#wash)" stroke="#16243A"/>
+  <text x="416" y="127" font-family="monospace" font-size="15" fill="#A78BFA">$ whoami</text>
+  <text x="416" y="171" font-family="monospace" font-size="31" font-weight="700" fill="#00E5FF">Md. Jahid Hasan</text>
+  <text x="416" y="205" font-family="monospace" font-size="16" fill="#D7E7FF">Competitive Programmer</text>
+  <text x="416" y="231" font-family="monospace" font-size="16" fill="#D7E7FF">AI &amp; Cybersecurity Enthusiast</text>
+  <text x="416" y="257" font-family="monospace" font-size="16" fill="#D7E7FF">Software Engineering Student</text>
+  <path d="M416 278H933" stroke="#16243A" stroke-width="2"/>
+  <text x="416" y="309" font-family="monospace" font-size="14" fill="#A78BFA">$ location</text>
+  <text x="540" y="309" font-family="monospace" font-size="14" fill="#D7E7FF">Daffodil Smart City, Savar, Bangladesh</text>
+  <text x="416" y="341" font-family="monospace" font-size="14" fill="#A78BFA">$ focus</text>
+  <text x="496" y="341" font-family="monospace" font-size="14" fill="#D7E7FF">Algorithms • AI • Cybersecurity</text>
+  <text x="416" y="371" font-family="monospace" font-size="13" fill="#8FA8C9">LEARN <tspan fill="#00E5FF">●</tspan> BUILD <tspan fill="#A78BFA">●</tspan> IMPROVE</text>
+  <rect x="13" y="13" width="974" height="404" fill="none" stroke="#00E5FF" stroke-opacity=".16"/>
+  <path d="M-100 100 L80 0" stroke="#00E5FF" stroke-width="2" opacity=".45">
+    <animate attributeName="opacity" values=".08;.55;.08" dur="3.6s" repeatCount="indefinite"/>
+  </path>
+  <rect x="13" y="13" width="974" height="404" fill="none" stroke="#A78BFA" stroke-width="1" opacity=".5">
+    <animate attributeName="stroke-opacity" values=".15;.75;.15" dur="4s" repeatCount="indefinite"/>
+  </rect>
+</g>
+</svg>
