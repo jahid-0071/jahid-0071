@@ -1,13 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="720" viewBox="0 0 1000 720" xmlns:c2pa="http://c2pa.org/manifest">
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1100" viewBox="0 0 1000 1100">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#090C12"/>
       <stop offset="100%" stop-color="#10151E"/>
     </linearGradient>
     <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="0">
-      <stop stop-color="#00E5FF"/>
+      <stop offset="0%" stop-color="#00E5FF"/>
       <stop offset="100%" stop-color="#7C3AED"/>
     </linearGradient>
+    <linearGradient id="fadeGrad" gradientUnits="userSpaceOnUse" x1="0" y1="-20" x2="0" y2="240">
+      <stop offset="0%" stop-color="#000"/>
+      <stop offset="100%" stop-color="#FFF"/>
+    </linearGradient>
+    <mask id="fade" maskUnits="userSpaceOnUse" x="0" y="-20" width="1000" height="260">
+      <rect x="0" y="-20" width="1000" height="260" fill="url(#fadeGrad)"/>
+    </mask>
     <filter id="glow">
       <feGaussianBlur stdDeviation="3" result="blur"/>
       <feMerge>
@@ -17,171 +24,159 @@
     </filter>
     <style>
       .mono { font-family: 'Courier New', Consolas, 'Liberation Mono', monospace; }
-    .command { fill: #5FFF87; font-size: 28px; font-weight: bold; }
-.output { fill: #E2E8F0; font-size: 26px; }
-.muted { fill: #94A3B8; font-size: 25px; }
-.rn { font: 24px 'Courier New', Consolas, monospace; }
-      .line {
-        opacity: 0;
-        animation: appear .5s ease forwards;
-      }
-      @keyframes appear {
-        to { opacity: 1; }
-      }
-      .cursor {
-        animation: blink .8s steps(2, start) infinite;
-      }
-      @keyframes blink {
-        to { opacity: 0; }
-      }
-      .scan {
-        animation: scan 4s ease-in-out infinite;
-      }
+
+      /* Title bar (upore) */
+      .title { font-size: 18px; font-weight: bold; fill: #E8ECF4; }
+      .menu  { font-size: 16px; fill: #9AA7BD; }
+      .live  { font-size: 16px; fill: #00E5FF; }
+
+      /* ===== SYSTEM ONLINE theke niche: SHOB 26px ===== */
+      .t26     { font-size: 26px; }
+      .status  { fill: #34D399; }
+      .profile { fill: #94A3B8; }
+      .tagline { fill: #00E5FF; }
+      .prompt  { stroke: #090C12; stroke-width: 5px; paint-order: stroke; }
+      .command { font-weight: bold; fill: #5FFF87; stroke: #090C12; stroke-width: 5px; paint-order: stroke; }
+      .output  { fill: #FFFFFF; stroke: #090C12; stroke-width: 5px; paint-order: stroke; }
+
+      .line { opacity: 0; animation: appear .5s ease forwards; }
+      @keyframes appear { to { opacity: 1; } }
+
+      .cursor { animation: blink .8s steps(2, start) infinite; }
+      @keyframes blink { to { opacity: 0; } }
+
+      .scan { animation: scan 5s ease-in-out infinite; }
       @keyframes scan {
-        0%,100% { transform: translateY(0); opacity: .15; }
-        50% { transform: translateY(590px); opacity: .65; }
+        0%,100% { transform: translateY(0); opacity: .12; }
+        50%     { transform: translateY(900px); opacity: .45; }
       }
-      .pulse {
-        animation: pulse 2s ease-in-out infinite;
-      }
-      @keyframes pulse {
-        50% { opacity: .4; }
-      }
+
+      .pulse { animation: pulse 2s ease-in-out infinite; }
+      @keyframes pulse { 50% { opacity: .4; } }
+
+      /* ===== BINARY RAIN (beshi, ujjol) ===== */
       .rain { animation: fall linear infinite; }
-      @keyframes fall { from { transform: translateY(-260px); } to { transform: translateY(740px); } }
-      .rn { font: 12px 'Courier New', Consolas, monospace; }
-      .c { fill: #00E5FF; } .p { fill: #A78BFA; }
-      .a { fill-opacity: .06; } .b { fill-opacity: .12; } .d { fill-opacity: .2; } .h { fill-opacity: .5; }
+      @keyframes fall { from { transform: translateY(-260px); } to { transform: translateY(1120px); } }
+      .rn { font: 16px 'Courier New', Consolas, monospace; }
+      .c { fill: #00E5FF; fill-opacity: .9; }
+      .p { fill: #A78BFA; fill-opacity: .9; }
     </style>
-    <clipPath id="rain-clip"><rect width="1000" height="720" rx="16"/></clipPath>
+    <clipPath id="rain-clip"><rect width="1000" height="1100" rx="16"/></clipPath>
+    <clipPath id="type-clip">
+      <rect x="46" y="118" width="0" height="32">
+        <animate attributeName="width" values="0;870;870;0" keyTimes="0;0.5;0.92;1" dur="11s" repeatCount="indefinite"/>
+      </rect>
+    </clipPath>
   </defs>
 
   <!-- Terminal body -->
-  <rect width="1000" height="720" rx="16" fill="url(#bg)" stroke="#334155" stroke-width="1.5"/>
+  <rect width="1000" height="1100" rx="16" fill="url(#bg)" stroke="#334155" stroke-width="1.5"/>
 
-  <!-- Binary rain (background) -->
+  <!-- ===== Binary rain (30 columns) ===== -->
   <g clip-path="url(#rain-clip)">
-    <g class="rain" style="animation-duration:8.1s;animation-delay:-1.8s"><text class="rn c"><tspan x="20" dy="0" class="a">1</tspan><tspan x="20" dy="16" class="a">0</tspan><tspan x="20" dy="16" class="a">1</tspan><tspan x="20" dy="16" class="a">0</tspan><tspan x="20" dy="16" class="b">0</tspan><tspan x="20" dy="16" class="b">0</tspan><tspan x="20" dy="16" class="b">0</tspan><tspan x="20" dy="16" class="b">1</tspan><tspan x="20" dy="16" class="d">1</tspan><tspan x="20" dy="16" class="d">0</tspan><tspan x="20" dy="16" class="d">1</tspan><tspan x="20" dy="16" class="d">0</tspan><tspan x="20" dy="16" class="h">0</tspan></text></g>
-    <g class="rain" style="animation-duration:16.6s;animation-delay:-2.8s"><text class="rn c"><tspan x="61" dy="0" class="a">1</tspan><tspan x="61" dy="16" class="a">0</tspan><tspan x="61" dy="16" class="a">0</tspan><tspan x="61" dy="16" class="a">0</tspan><tspan x="61" dy="16" class="b">1</tspan><tspan x="61" dy="16" class="b">0</tspan><tspan x="61" dy="16" class="b">0</tspan><tspan x="61" dy="16" class="d">0</tspan><tspan x="61" dy="16" class="d">0</tspan><tspan x="61" dy="16" class="d">0</tspan><tspan x="61" dy="16" class="h">0</tspan></text></g>
-    <g class="rain" style="animation-duration:16.4s;animation-delay:-4.3s"><text class="rn c"><tspan x="102" dy="0" class="a">0</tspan><tspan x="102" dy="16" class="a">0</tspan><tspan x="102" dy="16" class="a">0</tspan><tspan x="102" dy="16" class="b">0</tspan><tspan x="102" dy="16" class="b">1</tspan><tspan x="102" dy="16" class="b">1</tspan><tspan x="102" dy="16" class="d">0</tspan><tspan x="102" dy="16" class="d">1</tspan><tspan x="102" dy="16" class="d">1</tspan><tspan x="102" dy="16" class="h">0</tspan></text></g>
-    <g class="rain" style="animation-duration:14.3s;animation-delay:-0.8s"><text class="rn c"><tspan x="143" dy="0" class="a">0</tspan><tspan x="143" dy="16" class="a">1</tspan><tspan x="143" dy="16" class="a">0</tspan><tspan x="143" dy="16" class="a">1</tspan><tspan x="143" dy="16" class="b">1</tspan><tspan x="143" dy="16" class="b">1</tspan><tspan x="143" dy="16" class="b">1</tspan><tspan x="143" dy="16" class="d">1</tspan><tspan x="143" dy="16" class="d">0</tspan><tspan x="143" dy="16" class="d">1</tspan><tspan x="143" dy="16" class="h">1</tspan></text></g>
-    <g class="rain" style="animation-duration:14.4s;animation-delay:-9.0s"><text class="rn p"><tspan x="184" dy="0" class="a">1</tspan><tspan x="184" dy="16" class="a">1</tspan><tspan x="184" dy="16" class="a">0</tspan><tspan x="184" dy="16" class="b">1</tspan><tspan x="184" dy="16" class="b">1</tspan><tspan x="184" dy="16" class="b">1</tspan><tspan x="184" dy="16" class="d">0</tspan><tspan x="184" dy="16" class="d">1</tspan><tspan x="184" dy="16" class="h">0</tspan></text></g>
-    <g class="rain" style="animation-duration:11.9s;animation-delay:-11.6s"><text class="rn c"><tspan x="225" dy="0" class="a">0</tspan><tspan x="225" dy="16" class="a">1</tspan><tspan x="225" dy="16" class="a">1</tspan><tspan x="225" dy="16" class="b">1</tspan><tspan x="225" dy="16" class="b">1</tspan><tspan x="225" dy="16" class="b">1</tspan><tspan x="225" dy="16" class="d">0</tspan><tspan x="225" dy="16" class="d">1</tspan><tspan x="225" dy="16" class="d">1</tspan><tspan x="225" dy="16" class="h">0</tspan></text></g>
-    <g class="rain" style="animation-duration:13.6s;animation-delay:-9.8s"><text class="rn c"><tspan x="266" dy="0" class="a">1</tspan><tspan x="266" dy="16" class="a">0</tspan><tspan x="266" dy="16" class="a">1</tspan><tspan x="266" dy="16" class="b">1</tspan><tspan x="266" dy="16" class="b">0</tspan><tspan x="266" dy="16" class="b">1</tspan><tspan x="266" dy="16" class="d">1</tspan><tspan x="266" dy="16" class="d">1</tspan><tspan x="266" dy="16" class="d">0</tspan><tspan x="266" dy="16" class="h">0</tspan></text></g>
-    <g class="rain" style="animation-duration:8.5s;animation-delay:-7.8s"><text class="rn p"><tspan x="307" dy="0" class="a">0</tspan><tspan x="307" dy="16" class="a">0</tspan><tspan x="307" dy="16" class="a">0</tspan><tspan x="307" dy="16" class="a">1</tspan><tspan x="307" dy="16" class="b">0</tspan><tspan x="307" dy="16" class="b">0</tspan><tspan x="307" dy="16" class="b">1</tspan><tspan x="307" dy="16" class="d">1</tspan><tspan x="307" dy="16" class="d">1</tspan><tspan x="307" dy="16" class="d">1</tspan><tspan x="307" dy="16" class="h">0</tspan></text></g>
-    <g class="rain" style="animation-duration:9.3s;animation-delay:-7.9s"><text class="rn p"><tspan x="348" dy="0" class="a">1</tspan><tspan x="348" dy="16" class="a">0</tspan><tspan x="348" dy="16" class="a">0</tspan><tspan x="348" dy="16" class="b">0</tspan><tspan x="348" dy="16" class="b">1</tspan><tspan x="348" dy="16" class="b">0</tspan><tspan x="348" dy="16" class="d">0</tspan><tspan x="348" dy="16" class="d">1</tspan><tspan x="348" dy="16" class="h">1</tspan></text></g>
-    <g class="rain" style="animation-duration:11.4s;animation-delay:-11.3s"><text class="rn c"><tspan x="389" dy="0" class="a">0</tspan><tspan x="389" dy="16" class="a">1</tspan><tspan x="389" dy="16" class="a">1</tspan><tspan x="389" dy="16" class="a">1</tspan><tspan x="389" dy="16" class="b">1</tspan><tspan x="389" dy="16" class="b">1</tspan><tspan x="389" dy="16" class="b">1</tspan><tspan x="389" dy="16" class="d">1</tspan><tspan x="389" dy="16" class="d">1</tspan><tspan x="389" dy="16" class="d">0</tspan><tspan x="389" dy="16" class="h">0</tspan></text></g>
-    <g class="rain" style="animation-duration:14.8s;animation-delay:-5.4s"><text class="rn p"><tspan x="430" dy="0" class="a">1</tspan><tspan x="430" dy="16" class="a">1</tspan><tspan x="430" dy="16" class="a">0</tspan><tspan x="430" dy="16" class="b">0</tspan><tspan x="430" dy="16" class="b">1</tspan><tspan x="430" dy="16" class="b">1</tspan><tspan x="430" dy="16" class="d">1</tspan><tspan x="430" dy="16" class="d">0</tspan><tspan x="430" dy="16" class="d">1</tspan><tspan x="430" dy="16" class="h">0</tspan></text></g>
-    <g class="rain" style="animation-duration:10.5s;animation-delay:-3.6s"><text class="rn p"><tspan x="471" dy="0" class="a">1</tspan><tspan x="471" dy="16" class="a">1</tspan><tspan x="471" dy="16" class="a">1</tspan><tspan x="471" dy="16" class="a">1</tspan><tspan x="471" dy="16" class="a">0</tspan><tspan x="471" dy="16" class="b">0</tspan><tspan x="471" dy="16" class="b">1</tspan><tspan x="471" dy="16" class="b">1</tspan><tspan x="471" dy="16" class="b">1</tspan><tspan x="471" dy="16" class="d">1</tspan><tspan x="471" dy="16" class="d">1</tspan><tspan x="471" dy="16" class="d">1</tspan><tspan x="471" dy="16" class="d">1</tspan><tspan x="471" dy="16" class="h">1</tspan></text></g>
-    <g class="rain" style="animation-duration:9.5s;animation-delay:-7.4s"><text class="rn c"><tspan x="512" dy="0" class="a">0</tspan><tspan x="512" dy="16" class="a">1</tspan><tspan x="512" dy="16" class="a">1</tspan><tspan x="512" dy="16" class="a">1</tspan><tspan x="512" dy="16" class="b">0</tspan><tspan x="512" dy="16" class="b">0</tspan><tspan x="512" dy="16" class="b">0</tspan><tspan x="512" dy="16" class="b">1</tspan><tspan x="512" dy="16" class="d">1</tspan><tspan x="512" dy="16" class="d">1</tspan><tspan x="512" dy="16" class="d">0</tspan><tspan x="512" dy="16" class="h">1</tspan></text></g>
-    <g class="rain" style="animation-duration:9.5s;animation-delay:-8.5s"><text class="rn c"><tspan x="553" dy="0" class="a">1</tspan><tspan x="553" dy="16" class="a">1</tspan><tspan x="553" dy="16" class="a">1</tspan><tspan x="553" dy="16" class="a">0</tspan><tspan x="553" dy="16" class="b">0</tspan><tspan x="553" dy="16" class="b">0</tspan><tspan x="553" dy="16" class="b">1</tspan><tspan x="553" dy="16" class="b">0</tspan><tspan x="553" dy="16" class="d">0</tspan><tspan x="553" dy="16" class="d">0</tspan><tspan x="553" dy="16" class="d">0</tspan><tspan x="553" dy="16" class="d">1</tspan><tspan x="553" dy="16" class="h">0</tspan></text></g>
-    <g class="rain" style="animation-duration:13.3s;animation-delay:-3.2s"><text class="rn c"><tspan x="594" dy="0" class="a">0</tspan><tspan x="594" dy="16" class="a">1</tspan><tspan x="594" dy="16" class="a">0</tspan><tspan x="594" dy="16" class="b">0</tspan><tspan x="594" dy="16" class="b">1</tspan><tspan x="594" dy="16" class="b">1</tspan><tspan x="594" dy="16" class="d">1</tspan><tspan x="594" dy="16" class="d">1</tspan><tspan x="594" dy="16" class="h">0</tspan></text></g>
-    <g class="rain" style="animation-duration:16.6s;animation-delay:-13.6s"><text class="rn c"><tspan x="635" dy="0" class="a">1</tspan><tspan x="635" dy="16" class="a">1</tspan><tspan x="635" dy="16" class="a">1</tspan><tspan x="635" dy="16" class="a">0</tspan><tspan x="635" dy="16" class="b">1</tspan><tspan x="635" dy="16" class="b">0</tspan><tspan x="635" dy="16" class="b">1</tspan><tspan x="635" dy="16" class="d">0</tspan><tspan x="635" dy="16" class="d">1</tspan><tspan x="635" dy="16" class="d">1</tspan><tspan x="635" dy="16" class="h">1</tspan></text></g>
-    <g class="rain" style="animation-duration:9.0s;animation-delay:-5.1s"><text class="rn c"><tspan x="676" dy="0" class="a">1</tspan><tspan x="676" dy="16" class="a">1</tspan><tspan x="676" dy="16" class="a">0</tspan><tspan x="676" dy="16" class="a">0</tspan><tspan x="676" dy="16" class="b">1</tspan><tspan x="676" dy="16" class="b">1</tspan><tspan x="676" dy="16" class="b">0</tspan><tspan x="676" dy="16" class="b">0</tspan><tspan x="676" dy="16" class="d">0</tspan><tspan x="676" dy="16" class="d">1</tspan><tspan x="676" dy="16" class="d">0</tspan><tspan x="676" dy="16" class="h">1</tspan></text></g>
-    <g class="rain" style="animation-duration:12.5s;animation-delay:-5.2s"><text class="rn c"><tspan x="717" dy="0" class="a">1</tspan><tspan x="717" dy="16" class="a">1</tspan><tspan x="717" dy="16" class="a">1</tspan><tspan x="717" dy="16" class="a">1</tspan><tspan x="717" dy="16" class="b">0</tspan><tspan x="717" dy="16" class="b">1</tspan><tspan x="717" dy="16" class="b">1</tspan><tspan x="717" dy="16" class="b">1</tspan><tspan x="717" dy="16" class="d">1</tspan><tspan x="717" dy="16" class="d">1</tspan><tspan x="717" dy="16" class="d">0</tspan><tspan x="717" dy="16" class="d">1</tspan><tspan x="717" dy="16" class="h">1</tspan></text></g>
-    <g class="rain" style="animation-duration:15.0s;animation-delay:-12.4s"><text class="rn p"><tspan x="758" dy="0" class="a">1</tspan><tspan x="758" dy="16" class="a">1</tspan><tspan x="758" dy="16" class="a">1</tspan><tspan x="758" dy="16" class="a">0</tspan><tspan x="758" dy="16" class="b">1</tspan><tspan x="758" dy="16" class="b">0</tspan><tspan x="758" dy="16" class="b">0</tspan><tspan x="758" dy="16" class="d">1</tspan><tspan x="758" dy="16" class="d">0</tspan><tspan x="758" dy="16" class="d">1</tspan><tspan x="758" dy="16" class="h">0</tspan></text></g>
-    <g class="rain" style="animation-duration:10.6s;animation-delay:-6.4s"><text class="rn c"><tspan x="799" dy="0" class="a">1</tspan><tspan x="799" dy="16" class="a">0</tspan><tspan x="799" dy="16" class="a">1</tspan><tspan x="799" dy="16" class="b">0</tspan><tspan x="799" dy="16" class="b">0</tspan><tspan x="799" dy="16" class="b">1</tspan><tspan x="799" dy="16" class="d">1</tspan><tspan x="799" dy="16" class="d">0</tspan><tspan x="799" dy="16" class="h">1</tspan></text></g>
-    <g class="rain" style="animation-duration:8.3s;animation-delay:-2.1s"><text class="rn c"><tspan x="840" dy="0" class="a">0</tspan><tspan x="840" dy="16" class="a">0</tspan><tspan x="840" dy="16" class="a">0</tspan><tspan x="840" dy="16" class="a">1</tspan><tspan x="840" dy="16" class="b">1</tspan><tspan x="840" dy="16" class="b">1</tspan><tspan x="840" dy="16" class="b">1</tspan><tspan x="840" dy="16" class="b">0</tspan><tspan x="840" dy="16" class="d">1</tspan><tspan x="840" dy="16" class="d">1</tspan><tspan x="840" dy="16" class="d">1</tspan><tspan x="840" dy="16" class="h">0</tspan></text></g>
-    <g class="rain" style="animation-duration:15.5s;animation-delay:-1.0s"><text class="rn p"><tspan x="881" dy="0" class="a">0</tspan><tspan x="881" dy="16" class="a">0</tspan><tspan x="881" dy="16" class="a">0</tspan><tspan x="881" dy="16" class="a">1</tspan><tspan x="881" dy="16" class="b">1</tspan><tspan x="881" dy="16" class="b">1</tspan><tspan x="881" dy="16" class="b">1</tspan><tspan x="881" dy="16" class="b">1</tspan><tspan x="881" dy="16" class="d">1</tspan><tspan x="881" dy="16" class="d">0</tspan><tspan x="881" dy="16" class="d">1</tspan><tspan x="881" dy="16" class="h">1</tspan></text></g>
-    <g class="rain" style="animation-duration:12.8s;animation-delay:-5.4s"><text class="rn p"><tspan x="922" dy="0" class="a">1</tspan><tspan x="922" dy="16" class="a">1</tspan><tspan x="922" dy="16" class="a">1</tspan><tspan x="922" dy="16" class="b">1</tspan><tspan x="922" dy="16" class="b">0</tspan><tspan x="922" dy="16" class="b">0</tspan><tspan x="922" dy="16" class="d">1</tspan><tspan x="922" dy="16" class="d">1</tspan><tspan x="922" dy="16" class="h">1</tspan></text></g>
-    <g class="rain" style="animation-duration:15.6s;animation-delay:-3.4s"><text class="rn p"><tspan x="963" dy="0" class="a">0</tspan><tspan x="963" dy="16" class="a">0</tspan><tspan x="963" dy="16" class="a">1</tspan><tspan x="963" dy="16" class="a">0</tspan><tspan x="963" dy="16" class="b">0</tspan><tspan x="963" dy="16" class="b">0</tspan><tspan x="963" dy="16" class="b">1</tspan><tspan x="963" dy="16" class="b">1</tspan><tspan x="963" dy="16" class="d">0</tspan><tspan x="963" dy="16" class="d">1</tspan><tspan x="963" dy="16" class="d">1</tspan><tspan x="963" dy="16" class="d">0</tspan><tspan x="963" dy="16" class="h">0</tspan></text></g>
+    <g class="rain" style="animation-duration:8s;animation-delay:-1s"><text class="rn c" mask="url(#fade)" x="12 12 12 12 12 12 12 12 12 12 12 12 12 12" dy="0 16 16 16 16 16 16 16 16 16 16 16 16 16">10110100101101</text></g>
+    <g class="rain" style="animation-duration:12s;animation-delay:-6s"><text class="rn p" mask="url(#fade)" x="45 45 45 45 45 45 45 45 45 45 45 45 45 45" dy="0 16 16 16 16 16 16 16 16 16 16 16 16 16">01001101010011</text></g>
+    <g class="rain" style="animation-duration:10s;animation-delay:-3s"><text class="rn c" mask="url(#fade)" x="78 78 78 78 78 78 78 78 78 78 78 78 78 78" dy="0 16 16 16 16 16 16 16 16 16 16 16 16 16">11010010110100</text></g>
+    <g class="rain" style="animation-duration:14s;animation-delay:-9s"><text class="rn p" mask="url(#fade)" x="111 111 111 111 111 111 111 111 111 111 111 111 111 111" dy="0 16 16 16 16 16 16 16 16 16 16 16 16 16">00110101100101</text></g>
+    <g class="rain" style="animation-duration:9s;animation-delay:-5s"><text class="rn c" mask="url(#fade)" x="144 144 144 144 144 144 144 144 144 144 144 144 144 144" dy="0 16 16 16 16 16 16 16 16 16 16 16 16 16">10011010010110</text></g>
+    <g class="rain" style="animation-duration:13s;animation-delay:-2s"><text class="rn p" mask="url(#fade)" x="177 177 177 177 177 177 177 177 177 177 177 177 177 177" dy="0 16 16 16 16 16 16 16 16 16 16 16 16 16">01101001101001</text></g>
+    <g class="rain" style="animation-duration:11s;animation-delay:-8s"><text class="rn c" mask="url(#fade)" x="210 210 210 210 210 210 210 210 210 210 210 210 210 210" dy="0 16 16 16 16 16 16 16 16 16 16 16 16 16">11001011010010</text></g>
+    <g class="rain" style="animation-duration:15s;animation-delay:-4s"><text class="rn p" mask="url(#fade)" x="243 243 243 243 243 243 243 243 243 243 243 243 243 243" dy="0 16 16 16 16 16 16 16 16 16 16 16 16 16">00101101001101</text></g>
+    <g class="rain" style="animation-duration:9.5s;animation-delay:-7s"><text class="rn c" mask="url(#fade)" x="276 276 276 276 276 276 276 276 276 276 276 276 276 276" dy="0 16 16 16 16 16 16 16 16 16 16 16 16 16">10100110110010</text></g>
+    <g class="rain" style="animation-duration:12.5s;animation-delay:-11s"><text class="rn p" mask="url(#fade)" x="309 309 309 309 309 309 309 309 309 309 309 309 309 309" dy="0 16 16 16 16 16 16 16 16 16 16 16 16 16">01011001011010</text></g>
+    <g class="rain" style="animation-duration:10.5s;animation-delay:-2.5s"><text class="rn c" mask="url(#fade)" x="342 342 342 342 342 342 342 342 342 342 342 342 342 342" dy="0 16 16 16 16 16 16 16 16 16 16 16 16 16">11100101001101</text></g>
+    <g class="rain" style="animation-duration:14.5s;animation-delay:-10s"><text class="rn p" mask="url(#fade)" x="375 375 375 375 375 375 375 375 375 375 375 375 375 375" dy="0 16 16 16 16 16 16 16 16 16 16 16 16 16">00110010110101</text></g>
+    <g class="rain" style="animation-duration:11.5s;animation-delay:-5.5s"><text class="rn c" mask="url(#fade)" x="408 408 408 408 408 408 408 408 408 408 408 408 408 408" dy="0 16 16 16 16 16 16 16 16 16 16 16 16 16">10010110100110</text></g>
+    <g class="rain" style="animation-duration:13.5s;animation-delay:-1.5s"><text class="rn p" mask="url(#fade)" x="441 441 441 441 441 441 441 441 441 441 441 441 441 441" dy="0 16 16 16 16 16 16 16 16 16 16 16 16 16">01101010011001</text></g>
+    <g class="rain" style="animation-duration:9s;animation-delay:-4.5s"><text class="rn c" mask="url(#fade)" x="474 474 474 474 474 474 474 474 474 474 474 474 474 474" dy="0 16 16 16 16 16 16 16 16 16 16 16 16 16">11010011010110</text></g>
+    <g class="rain" style="animation-duration:16s;animation-delay:-12s"><text class="rn p" mask="url(#fade)" x="507 507 507 507 507 507 507 507 507 507 507 507 507 507" dy="0 16 16 16 16 16 16 16 16 16 16 16 16 16">00101100101101</text></g>
+    <g class="rain" style="animation-duration:12.8s;animation-delay:-7.5s"><text class="rn c" mask="url(#fade)" x="540 540 540 540 540 540 540 540 540 540 540 540 540 540" dy="0 16 16 16 16 16 16 16 16 16 16 16 16 16">10110010011010</text></g>
+    <g class="rain" style="animation-duration:10s;animation-delay:-3.5s"><text class="rn p" mask="url(#fade)" x="573 573 573 573 573 573 573 573 573 573 573 573 573 573" dy="0 16 16 16 16 16 16 16 16 16 16 16 16 16">01001011010011</text></g>
+    <g class="rain" style="animation-duration:15.5s;animation-delay:-9.5s"><text class="rn c" mask="url(#fade)" x="606 606 606 606 606 606 606 606 606 606 606 606 606 606" dy="0 16 16 16 16 16 16 16 16 16 16 16 16 16">11001101001011</text></g>
+    <g class="rain" style="animation-duration:11s;animation-delay:-6.5s"><text class="rn p" mask="url(#fade)" x="639 639 639 639 639 639 639 639 639 639 639 639 639 639" dy="0 16 16 16 16 16 16 16 16 16 16 16 16 16">00110110010101</text></g>
+    <g class="rain" style="animation-duration:14s;animation-delay:-0.5s"><text class="rn c" mask="url(#fade)" x="672 672 672 672 672 672 672 672 672 672 672 672 672 672" dy="0 16 16 16 16 16 16 16 16 16 16 16 16 16">10101001101100</text></g>
+    <g class="rain" style="animation-duration:9.8s;animation-delay:-8.5s"><text class="rn p" mask="url(#fade)" x="705 705 705 705 705 705 705 705 705 705 705 705 705 705" dy="0 16 16 16 16 16 16 16 16 16 16 16 16 16">01011010010110</text></g>
+    <g class="rain" style="animation-duration:13s;animation-delay:-4.2s"><text class="rn c" mask="url(#fade)" x="738 738 738 738 738 738 738 738 738 738 738 738 738 738" dy="0 16 16 16 16 16 16 16 16 16 16 16 16 16">11010100110010</text></g>
+    <g class="rain" style="animation-duration:15s;animation-delay:-10.5s"><text class="rn p" mask="url(#fade)" x="771 771 771 771 771 771 771 771 771 771 771 771 771 771" dy="0 16 16 16 16 16 16 16 16 16 16 16 16 16">00101011001101</text></g>
+    <g class="rain" style="animation-duration:10.8s;animation-delay:-5.8s"><text class="rn c" mask="url(#fade)" x="804 804 804 804 804 804 804 804 804 804 804 804 804 804" dy="0 16 16 16 16 16 16 16 16 16 16 16 16 16">10011001011010</text></g>
+    <g class="rain" style="animation-duration:12.2s;animation-delay:-2.2s"><text class="rn p" mask="url(#fade)" x="837 837 837 837 837 837 837 837 837 837 837 837 837 837" dy="0 16 16 16 16 16 16 16 16 16 16 16 16 16">01100101101001</text></g>
+    <g class="rain" style="animation-duration:9.2s;animation-delay:-7.2s"><text class="rn c" mask="url(#fade)" x="870 870 870 870 870 870 870 870 870 870 870 870 870 870" dy="0 16 16 16 16 16 16 16 16 16 16 16 16 16">11001010110101</text></g>
+    <g class="rain" style="animation-duration:16.5s;animation-delay:-11.5s"><text class="rn p" mask="url(#fade)" x="903 903 903 903 903 903 903 903 903 903 903 903 903 903" dy="0 16 16 16 16 16 16 16 16 16 16 16 16 16">00110100101011</text></g>
+    <g class="rain" style="animation-duration:11.8s;animation-delay:-3.8s"><text class="rn c" mask="url(#fade)" x="936 936 936 936 936 936 936 936 936 936 936 936 936 936" dy="0 16 16 16 16 16 16 16 16 16 16 16 16 16">10110101001101</text></g>
+    <g class="rain" style="animation-duration:13.8s;animation-delay:-9.2s"><text class="rn p" mask="url(#fade)" x="969 969 969 969 969 969 969 969 969 969 969 969 969 969" dy="0 16 16 16 16 16 16 16 16 16 16 16 16 16">01010011010010</text></g>
   </g>
 
-  <!-- Kali / Xfce-style title bar -->
-  <path d="M16 0 H984 Q1000 0 1000 16 V58 H0 V16 Q0 0 16 0" fill="#1B2130"/>
-  <rect x="0" y="36" width="1000" height="22" fill="#141A26"/>
-  <path d="M0 36 H1000" stroke="#2B3B5C"/>
-  <text x="500" y="24" text-anchor="middle" class="mono" font-size="14" font-weight="bold" fill="#E8ECF4">jahid@kali: ~/about-me</text>
-  <g stroke="#9AA7BD" stroke-width="1.6" fill="none" stroke-linecap="round">
+  <!-- Title bar -->
+  <path d="M16 0 H984 Q1000 0 1000 16 V62 H0 V16 Q0 0 16 0" fill="#1B2130"/>
+  <rect x="0" y="38" width="1000" height="24" fill="#141A26"/>
+  <path d="M0 38 H1000" stroke="#2B3B5C"/>
+  <text x="500" y="26" text-anchor="middle" class="mono title">jahid@kali: ~/about-me</text>
+  <g stroke="#9AA7BD" stroke-width="1.8" fill="none" stroke-linecap="round">
     <path d="M944 22 H954"/>
     <rect x="962" y="13" width="9" height="9" rx="1"/>
     <path d="M978 13 L987 22 M987 13 L978 22" stroke="#5C9DFF"/>
   </g>
-  <text x="22" y="52" class="mono" font-size="13" fill="#9AA7BD" xml:space="preserve">File   Edit   View   Terminal   Tabs   Help</text>
-  <text x="965" y="52" text-anchor="end" class="mono" font-size="13" fill="#00E5FF">LIVE SESSION</text>
+  <text x="22" y="56" class="mono menu" xml:space="preserve">File   Edit   View   Terminal   Tabs   Help</text>
+  <text x="978" y="56" text-anchor="end" class="mono live">LIVE SESSION</text>
 
-  <!-- Status -->
-  <circle cx="31" cy="84" r="5" fill="#34D399" class="pulse"/>
-  <text x="46" y="90" class="mono" font-size="14" fill="#34D399">SYSTEM ONLINE</text>
-  <text x="970" y="90" text-anchor="end" class="mono muted">PROFILE: JAHID-0071</text>
+  <!-- ===== SYSTEM ONLINE theke shuru: shob 26px ===== -->
+  <rect x="0" y="66" width="1000" height="100" fill="#090C12" fill-opacity=".85"/>
+  <circle cx="31" cy="94" r="7" fill="#34D399" class="pulse"/>
+  <text x="46" y="103" class="mono t26 status">SYSTEM ONLINE</text>
+  <text x="970" y="103" text-anchor="end" class="mono t26 profile">PROFILE: JAHID-0071</text>
+
   <!-- Typing animation -->
-  <clipPath id="type-clip"><rect x="46" y="91" width="0" height="13"><animate attributeName="width" values="0;6.6;13.2;19.8;26.4;33;39.6;46.2;52.8;59.4;66;72.6;79.2;85.8;92.4;99;105.6;112.2;118.8;125.4;132;138.6;145.2;151.8;158.4;165;171.6;178.2;184.8;191.4;198;204.6;211.2;217.8;224.4;231;237.6;244.2;250.8;257.4;264;270.6;277.2;283.8;290.4;297;303.6;310.2;316.8;323.4;330;336.6;343.2;349.8;356.4;363;0;0" keyTimes="0;0.008;0.016;0.025;0.033;0.041;0.049;0.057;0.065;0.074;0.082;0.09;0.098;0.106;0.115;0.123;0.131;0.139;0.147;0.155;0.164;0.172;0.18;0.188;0.196;0.205;0.213;0.221;0.229;0.237;0.245;0.254;0.262;0.27;0.278;0.286;0.295;0.303;0.311;0.319;0.327;0.335;0.344;0.352;0.36;0.368;0.376;0.385;0.393;0.401;0.409;0.417;0.425;0.434;0.442;0.45;0.92;1" calcMode="discrete" dur="11s" repeatCount="indefinite"/></rect></clipPath>
-  <text x="46" y="102" textLength="363" lengthAdjust="spacing" class="mono" font-size="11" fill="#00E5FF" clip-path="url(#type-clip)" xml:space="preserve">> Software Engineering Student | Competitive Programmer</text>
-  <rect x="46" y="92" width="6" height="11" fill="#00E5FF" class="cursor"><animate attributeName="x" values="46;52.6;59.2;65.8;72.4;79;85.6;92.2;98.8;105.4;112;118.6;125.2;131.8;138.4;145;151.6;158.2;164.8;171.4;178;184.6;191.2;197.8;204.4;211;217.6;224.2;230.8;237.4;244;250.6;257.2;263.8;270.4;277;283.6;290.2;296.8;303.4;310;316.6;323.2;329.8;336.4;343;349.6;356.2;362.8;369.4;376;382.6;389.2;395.8;402.4;409;46;46" keyTimes="0;0.008;0.016;0.025;0.033;0.041;0.049;0.057;0.065;0.074;0.082;0.09;0.098;0.106;0.115;0.123;0.131;0.139;0.147;0.155;0.164;0.172;0.18;0.188;0.196;0.205;0.213;0.221;0.229;0.237;0.245;0.254;0.262;0.27;0.278;0.286;0.295;0.303;0.311;0.319;0.327;0.335;0.344;0.352;0.36;0.368;0.376;0.385;0.393;0.401;0.409;0.417;0.425;0.434;0.442;0.45;0.92;1" calcMode="discrete" dur="11s" repeatCount="indefinite"/></rect>
-  <path d="M25 105 H975" stroke="#334155"/>
+  <text x="46" y="142" class="mono t26 tagline" clip-path="url(#type-clip)" xml:space="preserve">&gt; Software Engineering Student | Competitive Programmer</text>
+  <rect x="46" y="122" width="14" height="26" fill="#00E5FF" class="cursor">
+    <animate attributeName="x" values="46;904;904;46" keyTimes="0;0.5;0.92;1" dur="11s" repeatCount="indefinite"/>
+  </rect>
+  <path d="M25 160 H975" stroke="#334155"/>
 
-  <!-- Whoami -->
+  <!-- ===== whoami ===== -->
   <g class="mono">
     <g class="line" style="animation-delay:.4s">
-      <text x="32" y="121" class="mono" font-size="14" xml:space="preserve"><tspan fill="#5C9DFF">┌──(</tspan><tspan fill="#2B7BFF" font-weight="bold">jahid㉿kali</tspan><tspan fill="#5C9DFF">)-[</tspan><tspan fill="#FFFFFF" font-weight="bold">~/about-me</tspan><tspan fill="#5C9DFF">]</tspan></text>
-      <text x="32" y="140" class="command"><tspan fill="#5C9DFF">└─</tspan><tspan fill="#2B7BFF">$ </tspan>whoami</text>
+      <text x="32" y="198" class="mono t26 prompt" xml:space="preserve"><tspan fill="#5C9DFF">┌──(</tspan><tspan fill="#2B7BFF" font-weight="bold">jahid㉿kali</tspan><tspan fill="#5C9DFF">)-[</tspan><tspan fill="#FFFFFF" font-weight="bold">~/about-me</tspan><tspan fill="#5C9DFF">]</tspan></text>
+      <text x="32" y="234" class="mono t26 command"><tspan fill="#5C9DFF">└─</tspan><tspan fill="#2B7BFF">$ </tspan>whoami</text>
     </g>
-    <g class="line" style="animation-delay:1.2s">
-      <text x="55" y="174" class="output">Md. Jahid Hasan</text>
-    </g>
-    <g class="line" style="animation-delay:1.8s">
-      <text x="55" y="201" class="output">Software Engineering Student</text>
-    </g>
-    <g class="line" style="animation-delay:2.4s">
-      <text x="55" y="228" class="output">Competitive Programmer</text>
-    </g>
+    <g class="line" style="animation-delay:1.2s"><text x="55" y="278" class="mono t26 output">Md. Jahid Hasan</text></g>
+    <g class="line" style="animation-delay:1.8s"><text x="55" y="314" class="mono t26 output">Software Engineering Student</text></g>
+    <g class="line" style="animation-delay:2.4s"><text x="55" y="350" class="mono t26 output">Competitive Programmer</text></g>
 
-    <!-- Focus -->
+    <!-- ===== focus ===== -->
     <g class="line" style="animation-delay:3.2s">
-      <text x="32" y="252" class="mono" font-size="14" xml:space="preserve"><tspan fill="#5C9DFF">┌──(</tspan><tspan fill="#2B7BFF" font-weight="bold">jahid㉿kali</tspan><tspan fill="#5C9DFF">)-[</tspan><tspan fill="#FFFFFF" font-weight="bold">~/about-me</tspan><tspan fill="#5C9DFF">]</tspan></text>
-      <text x="32" y="274" class="command"><tspan fill="#5C9DFF">└─</tspan><tspan fill="#2B7BFF">$ </tspan>focus</text>
+      <text x="32" y="400" class="mono t26 prompt" xml:space="preserve"><tspan fill="#5C9DFF">┌──(</tspan><tspan fill="#2B7BFF" font-weight="bold">jahid㉿kali</tspan><tspan fill="#5C9DFF">)-[</tspan><tspan fill="#FFFFFF" font-weight="bold">~/about-me</tspan><tspan fill="#5C9DFF">]</tspan></text>
+      <text x="32" y="436" class="mono t26 command"><tspan fill="#5C9DFF">└─</tspan><tspan fill="#2B7BFF">$ </tspan>focus</text>
     </g>
-    <g class="line" style="animation-delay:3.8s">
-      <text x="55" y="308" class="output">Data Structures &amp; Algorithms</text>
-    </g>
-    <g class="line" style="animation-delay:4.4s">
-      <text x="55" y="335" class="output">Problem Solving</text>
-    </g>
-    <g class="line" style="animation-delay:5s">
-      <text x="55" y="362" class="output">Software Development</text>
-    </g>
+    <g class="line" style="animation-delay:3.8s"><text x="55" y="480" class="mono t26 output">Data Structures &amp; Algorithms</text></g>
+    <g class="line" style="animation-delay:4.4s"><text x="55" y="516" class="mono t26 output">Problem Solving</text></g>
+    <g class="line" style="animation-delay:5s"><text x="55" y="552" class="mono t26 output">Software Development</text></g>
 
-    <!-- Exploring -->
+    <!-- ===== exploring ===== -->
     <g class="line" style="animation-delay:5.8s">
-      <text x="32" y="386" class="mono" font-size="14" xml:space="preserve"><tspan fill="#5C9DFF">┌──(</tspan><tspan fill="#2B7BFF" font-weight="bold">jahid㉿kali</tspan><tspan fill="#5C9DFF">)-[</tspan><tspan fill="#FFFFFF" font-weight="bold">~/about-me</tspan><tspan fill="#5C9DFF">]</tspan></text>
-      <text x="32" y="408" class="command"><tspan fill="#5C9DFF">└─</tspan><tspan fill="#2B7BFF">$ </tspan>exploring</text>
+      <text x="32" y="602" class="mono t26 prompt" xml:space="preserve"><tspan fill="#5C9DFF">┌──(</tspan><tspan fill="#2B7BFF" font-weight="bold">jahid㉿kali</tspan><tspan fill="#5C9DFF">)-[</tspan><tspan fill="#FFFFFF" font-weight="bold">~/about-me</tspan><tspan fill="#5C9DFF">]</tspan></text>
+      <text x="32" y="638" class="mono t26 command"><tspan fill="#5C9DFF">└─</tspan><tspan fill="#2B7BFF">$ </tspan>exploring</text>
     </g>
-    <g class="line" style="animation-delay:6.4s">
-      <text x="55" y="442" class="output">Artificial Intelligence</text>
-    </g>
-    <g class="line" style="animation-delay:7s">
-      <text x="55" y="469" class="output">Machine Learning</text>
-    </g>
-    <g class="line" style="animation-delay:7.6s">
-      <text x="55" y="496" class="output">Cybersecurity</text>
-    </g>
-    <g class="line" style="animation-delay:8.2s">
-      <text x="55" y="523" class="output">Modern Technologies</text>
-    </g>
+    <g class="line" style="animation-delay:6.4s"><text x="55" y="682" class="mono t26 output">Artificial Intelligence</text></g>
+    <g class="line" style="animation-delay:7s"><text x="55" y="718" class="mono t26 output">Machine Learning</text></g>
+    <g class="line" style="animation-delay:7.6s"><text x="55" y="754" class="mono t26 output">Cybersecurity</text></g>
+    <g class="line" style="animation-delay:8.2s"><text x="55" y="790" class="mono t26 output">Modern Technologies</text></g>
 
-    <!-- Mindset -->
+    <!-- ===== mindset ===== -->
     <g class="line" style="animation-delay:9s">
-      <text x="32" y="547" class="mono" font-size="14" xml:space="preserve"><tspan fill="#5C9DFF">┌──(</tspan><tspan fill="#2B7BFF" font-weight="bold">jahid㉿kali</tspan><tspan fill="#5C9DFF">)-[</tspan><tspan fill="#FFFFFF" font-weight="bold">~/about-me</tspan><tspan fill="#5C9DFF">]</tspan></text>
-      <text x="32" y="569" class="command"><tspan fill="#5C9DFF">└─</tspan><tspan fill="#2B7BFF">$ </tspan>mindset</text>
+      <text x="32" y="840" class="mono t26 prompt" xml:space="preserve"><tspan fill="#5C9DFF">┌──(</tspan><tspan fill="#2B7BFF" font-weight="bold">jahid㉿kali</tspan><tspan fill="#5C9DFF">)-[</tspan><tspan fill="#FFFFFF" font-weight="bold">~/about-me</tspan><tspan fill="#5C9DFF">]</tspan></text>
+      <text x="32" y="876" class="mono t26 command"><tspan fill="#5C9DFF">└─</tspan><tspan fill="#2B7BFF">$ </tspan>mindset</text>
     </g>
-    <g class="line" style="animation-delay:9.6s">
-      <text x="55" y="603" class="output">Learn continuously.</text>
-    </g>
-    <g class="line" style="animation-delay:10.2s">
-      <text x="55" y="630" class="output">Build meaningful things.</text>
-    </g>
-    <g class="line" style="animation-delay:10.8s">
-      <text x="55" y="657" class="output">Improve every day.</text>
-    </g>
+    <g class="line" style="animation-delay:9.6s"><text x="55" y="920" class="mono t26 output">Learn continuously.</text></g>
+    <g class="line" style="animation-delay:10.2s"><text x="55" y="956" class="mono t26 output">Build meaningful things.</text></g>
+    <g class="line" style="animation-delay:10.8s"><text x="55" y="992" class="mono t26 output">Improve every day.</text></g>
+
+    <!-- ===== final prompt ===== -->
     <g class="line" style="animation-delay:11.4s">
-      <text x="32" y="676" class="mono" font-size="14" xml:space="preserve"><tspan fill="#5C9DFF">┌──(</tspan><tspan fill="#2B7BFF" font-weight="bold">jahid㉿kali</tspan><tspan fill="#5C9DFF">)-[</tspan><tspan fill="#FFFFFF" font-weight="bold">~/about-me</tspan><tspan fill="#5C9DFF">]</tspan></text>
-      <text x="32" y="696" class="command"><tspan fill="#5C9DFF">└─</tspan><tspan fill="#2B7BFF">$ </tspan><tspan class="cursor" fill="#E8ECF4">█</tspan></text>
+      <text x="32" y="1042" class="mono t26 prompt" xml:space="preserve"><tspan fill="#5C9DFF">┌──(</tspan><tspan fill="#2B7BFF" font-weight="bold">jahid㉿kali</tspan><tspan fill="#5C9DFF">)-[</tspan><tspan fill="#FFFFFF" font-weight="bold">~/about-me</tspan><tspan fill="#5C9DFF">]</tspan></text>
+      <text x="32" y="1076" class="mono t26 command"><tspan fill="#5C9DFF">└─</tspan><tspan fill="#2B7BFF">$ </tspan><tspan class="cursor" fill="#E8ECF4">█</tspan></text>
     </g>
   </g>
 
   <!-- Scan line -->
-  <rect x="1" y="110" width="998" height="2" fill="url(#cyan)" filter="url(#glow)" class="scan" opacity=".35"/>
-
-  <!-- Footer accent -->
-  <path d="M25 710 H975" stroke="#334155"/>
-<metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYToyNTcyZTc5ZS00M2Q0LTQzOTctOGUxZC1mOWIxYTNiNzBlYWQAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaMr6el6T8iT2hauKh3JkPmsAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDo0OGEwZDc2MS0xOGM4LTQwOWItOWU0Yy1hZTkyZmFlMjVhY2FscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNokyhdAM0Nn567XAvtz1DFWQAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFgg7GKCi8BBzxa8loTX96Yue9CsvhD04EKOzWdrbHHmYcqkZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaEkiZAoEwXe+vU02jeFaeUwAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRMAAAAAAAAAAAAAAAAZGhhc2hYIBpwgYuuUDul5yTCUiu0meZzpbWJ8Cc7lnLz9pGR/8XRZG5hbWVuanVtYmYgbWFuaWZlc3RqZXhjbHVzaW9uc4GiZXN0YXJ0GVuyZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOjI1NzJlNzllLTQzZDQtNDM5Ny04ZTFkLWY5YjFhM2I3MGVhZC9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOmUyYTZhODNjLWM3OWYtNGJkNC1iOGFjLTJjY2I5ZWJkNTU2M3JjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCDsYoKLwEHPFryWhNf3pi570Ky+EPTgQo7NZ2tsceZhyqJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggltOtAaIH62sQQlBKXRkZLjslt5tlHbhOFMBzXSZh1K+iY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggLn9045pdxW96y2CiZd3uW/+qfxgefHLMdxNQ9dFYF4x0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQAEIuw28ImRxfpH9yXdRn8O5l4WULhoLFkGfJiL1XBpBQgKGx3yx7fvpCA0x7c7SUO8tyOCTaz5EZHnlv4bmSOY=</c2pa:manifest></metadata></svg>
+  <rect x="1" y="170" width="998" height="2" fill="url(#cyan)" filter="url(#glow)" class="scan" opacity=".35"/>
+</svg>
