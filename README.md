@@ -44,7 +44,9 @@
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=26&duration=2500&pause=1000&color=E6EDF3&vCenter=true&width=500&lines=%F0%9F%9B%A0%EF%B8%8F+Technologies+%26+Tools" alt="Technologies & Tools" />
 </h2>
 
-<sub>My technology stack and learning interests. Icons do not represent proficiency levels.</sub>
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=14&duration=3000&pause=1200&color=8B949E&center=true&vCenter=true&width=650&lines=My+technology+stack+and+learning+interests.;Exploring+new+technologies+and+building+skills." alt="Description Animation" />
+</p>
 
 ### 💻 Programming Languages
 
