@@ -1,4 +1,3 @@
-
 <!-- ===================== HERO ===================== -->
 
 <div align="center">
@@ -8,6 +7,14 @@
 <a href="https://github.com/jahid-0071">
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=1200&color=00E5FF&center=true&vCenter=true&width=720&height=50&lines=Competitive+Programmer;Software+Engineering+Student;Problem+Solver;Exploring+AI+%26+Cybersecurity;Learning.+Building.+Improving." alt="Typing animation" />
 </a>
+
+<br/>
+
+<!-- NEW: Animated terminal-style developer card inspired by your reference video -->
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="assets/light.svg">
+  <img width="100%" src="assets/dark.svg" alt="Animated terminal-style developer profile card">
+</picture>
 
 <br/>
 
@@ -176,9 +183,9 @@ Artificial Intelligence • Machine Learning • Cybersecurity • Software Engi
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/jahid-0071/jahid-0071/output/github-snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/jahid-0071/jahid-0071/output/github-snake.svg" />
-  <img alt="GitHub contribution snake animation" src="https://raw.githubusercontent.com/jahid-0071/jahid-0071/output/github-snake-dark.svg" />
+  <source media="(prefers-color-scheme: dark)" srcset="output/github-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="output/github-snake.svg" />
+  <img alt="GitHub contribution snake animation" src="output/github-snake-dark.svg" />
 </picture>
 
 </div>
@@ -221,6 +228,9 @@ Java programs and practical implementations for the SE217 Object-Oriented Progra
 
 <a href="https://github.com/jahid-0071">
 <img src="https://img.shields.io/badge/GitHub-jahid--0071-05070F?style=for-the-badge&logo=github&logoColor=00E5FF" alt="GitHub" />
+</a>
+<a href="https://www.linkedin.com/in/md-jahid-hasan-99a266371/">
+<img src="https://img.shields.io/badge/LinkedIn-Md.%20Jahid%20Hasan-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
 </a>
 
 </div>
