@@ -48,31 +48,41 @@
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=14&duration=3000&pause=1200&color=8B949E&center=true&vCenter=true&width=650&lines=My+technology+stack+and+learning+interests.;Exploring+new+technologies+and+building+skills." alt="Description Animation" />
 </p>
 
-### 💻 Programming Languages
+<h2 align="left">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=22&duration=2500&pause=1000&color=00E5FF&width=420&lines=%F0%9F%92%BB+Programming+Languages" alt="Programming Languages" />
+</h2>
 
 <p>
 <img src="https://skillicons.dev/icons?i=python,java,c,cpp,js,php&theme=dark" alt="Programming languages" />
 </p>
 
-### 🌐 Web Development
+<h2 align="left">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=22&duration=2500&pause=1000&color=00E5FF&width=420&lines=%F0%9F%8C%90+Web+Development" alt="Web Development" />
+</h2>
 
 <p>
 <img src="https://skillicons.dev/icons?i=html,css,react,nodejs&theme=dark" alt="Web development" />
 </p>
 
-### 🗄️ Databases
+<h2 align="left">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=22&duration=2500&pause=1000&color=00E5FF&width=300&lines=%F0%9F%97%84%EF%B8%8F+Databases" alt="Databases" />
+</h2>
 
 <p>
 <img src="https://skillicons.dev/icons?i=mysql&theme=dark" alt="MySQL" />
 </p>
 
-### 🤖 AI & Machine Learning
+<h2 align="left">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=22&duration=2500&pause=1000&color=00E5FF&width=420&lines=%F0%9F%A4%96+AI+%26+Machine+Learning" alt="AI & Machine Learning" />
+</h2>
 
 <p>
 <img src="https://skillicons.dev/icons?i=numpy,pandas,tensorflow,pytorch,jupyter&theme=dark" alt="AI and machine learning technologies" />
 </p>
 
-### ⚙️ Developer Tools & Platforms
+<h2 align="left">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=22&duration=2500&pause=1000&color=00E5FF&width=520&lines=%E2%9A%99%EF%B8%8F+Developer+Tools+%26+Platforms" alt="Developer Tools & Platforms" />
+</h2>
 
 <p>
 <img src="https://skillicons.dev/icons?i=git,github,vscode,docker,bash,linux&theme=dark" alt="Developer tools" />
