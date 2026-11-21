@@ -38,7 +38,6 @@
 <div align="center">
   <img src="./about-me.svg" width="100%" alt="About Me">
 </div>
-
 <!-- ===================== TECH STACK ===================== -->
 
 ## 🛠️ Technologies & Tools
