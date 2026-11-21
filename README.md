@@ -35,45 +35,9 @@
 <br/>
 
 <!-- ===================== ABOUT ===================== -->
-
-## 👨‍💻 About Me
-
-```text
-$ whoami
-
-  Md.Jahid Hasan
-  Software Engineering Student
-  Competitive Programmer
-
-$ focus
-
-  Data Structures & Algorithms
-  Problem Solving
-  Software Development
-
-$ exploring
-
-  Artificial Intelligence
-  Machine Learning
-  Cybersecurity
-  Modern Technologies
-
-$ mindset
-
-  Learn continuously.
-  Build meaningful things.
-  Improve every day.
-```
-
-- 🎓 Software Engineering Student
-- 🧩 Interested in Competitive Programming and Algorithmic Problem Solving
-- 💻 Working with multiple programming languages
-- 🤖 Exploring Artificial Intelligence and Machine Learning
-- 🔐 Interested in Cybersecurity
-- 🚀 Building projects and improving my development skills
-- 🌱 Always learning something new
-
-<br/>
+<div align="center">
+  <img src="./about-me.svg" width="100%" alt="About Me">
+</div>
 
 <!-- ===================== TECH STACK ===================== -->
 
