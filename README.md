@@ -78,23 +78,17 @@
 <img src="https://skillicons.dev/icons?i=git,github,vscode,docker,bash,linux&theme=dark" alt="Developer tools" />
 </p>
 
-**Additional Tools & Platforms:**
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=15&duration=3000&pause=1500&color=C7D2FE&width=680&height=64&repeat=true&multiline=true&lines=Additional+Tools+%26+Platforms%3A;Git+%E2%80%A2+GitHub+%E2%80%A2+VS+Code+%E2%80%A2+Linux+%E2%80%A2+Docker+%E2%80%A2+Terminal+%E2%80%A2+Jupyter+Notebook" alt="Additional Tools & Platforms: Git • GitHub • VS Code • Linux • Docker • Terminal • Jupyter Notebook" />
 
-Git • GitHub • VS Code • Linux • Docker • Terminal • Jupyter Notebook
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=15&duration=3000&pause=1500&color=C7D2FE&width=620&height=96&repeat=true&multiline=true&lines=%F0%9F%A7%A0+Computer+Science+Fundamentals%3A;Data+Structures+%E2%80%A2+Algorithms+%E2%80%A2+Object-Oriented+Programming;Problem+Solving+%E2%80%A2+Competitive+Programming" alt="🧠 Computer Science Fundamentals: Data Structures • Algorithms • Object-Oriented Programming • Problem Solving • Competitive Programming" />
 
-**🧠 Computer Science Fundamentals:**
-
-Data Structures • Algorithms • Object-Oriented Programming • Problem Solving • Competitive Programming
-
-**🔭 Areas of Interest:**
-
-Artificial Intelligence • Machine Learning • Cybersecurity • Software Engineering • Technology
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=15&duration=3000&pause=1500&color=C7D2FE&width=620&height=96&repeat=true&multiline=true&lines=%F0%9F%94%AD+Areas+of+Interest%3A;Artificial+Intelligence+%E2%80%A2+Machine+Learning+%E2%80%A2+Cybersecurity;Software+Engineering+%E2%80%A2+Technology" alt="🔭 Areas of Interest: Artificial Intelligence • Machine Learning • Cybersecurity • Software Engineering • Technology" />
 
 <br/>
 
 <!-- ===================== COMPETITIVE PROGRAMMING ===================== -->
 
-## 🏆 Competitive Programming
+## <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=26&duration=2500&pause=2000&color=00E5FF&width=460&height=45&vCenter=true&repeat=true&lines=%F0%9F%8F%86+Competitive+Programming" alt="🏆 Competitive Programming" />
 
 <div align="center">
 
@@ -111,7 +105,7 @@ Artificial Intelligence • Machine Learning • Cybersecurity • Software Engi
 
 <!-- ===================== GITHUB STATISTICS ===================== -->
 
-## 📊 GitHub Statistics
+## <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=26&duration=2500&pause=2000&color=00E5FF&width=360&height=45&vCenter=true&repeat=true&lines=%F0%9F%93%8A+GitHub+Statistics" alt="📊 GitHub Statistics" />
 
 <div align="center">
 
@@ -134,7 +128,7 @@ Artificial Intelligence • Machine Learning • Cybersecurity • Software Engi
 <!-- ===================== TROPHIES ===================== -->
 
 
-## 🏅 GitHub Achievements
+## <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=26&duration=2500&pause=2000&color=00E5FF&width=390&height=45&vCenter=true&repeat=true&lines=%F0%9F%8F%85+GitHub+Achievements" alt="🏅 GitHub Achievements" />
 
 <p align="center">
   <a href="https://github.com/jahid-0071?tab=achievements">
@@ -145,7 +139,7 @@ Artificial Intelligence • Machine Learning • Cybersecurity • Software Engi
 <!-- ===================== CONTRIBUTION SNAKE ===================== -->
 
 
-## 🐍 Contribution Snake
+## <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=26&duration=2500&pause=2000&color=00E5FF&width=380&height=45&vCenter=true&repeat=true&lines=%F0%9F%90%8D+Contribution+Snake" alt="🐍 Contribution Snake" />
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/jahid-0071/jahid-0071/output/github-snake-dark.svg" alt="GitHub Contribution Snake Dark" />
@@ -154,11 +148,11 @@ Artificial Intelligence • Machine Learning • Cybersecurity • Software Engi
 
 <!-- ===================== FEATURED PROJECTS ===================== -->
 
-## 🚀 Featured Projects
+## <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=26&duration=2500&pause=2000&color=00E5FF&width=370&height=45&vCenter=true&repeat=true&lines=%F0%9F%9A%80+Featured+Projects" alt="🚀 Featured Projects" />
 
 ### 🧠 [jahid-life-os](https://github.com/jahid-0071/jahid-life-os)
 
-An AI-powered Life OS and productivity application focused on managing goals, roadmaps, projects, habits, study plans, and daily tasks.
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=400&size=15&duration=2800&pause=1500&color=C7D2FE&width=560&height=96&repeat=true&multiline=true&lines=An+AI-powered+Life+OS+and+productivity+application;focused+on+managing+goals%2C+roadmaps%2C+projects%2C+habits%2C;study+plans%2C+and+daily+tasks." alt="An AI-powered Life OS and productivity application focused on managing goals, roadmaps, projects, habits, study plans, and daily tasks." />
 
 <img src="https://img.shields.io/badge/Kotlin-05070F?style=flat-square&logo=kotlin&logoColor=A97BFF" alt="Kotlin" />
 
@@ -168,7 +162,7 @@ An AI-powered Life OS and productivity application focused on managing goals, ro
 
 ### ☕ [se217-oop-lab](https://github.com/jahid-0071/se217-oop-lab)
 
-Java programs and practical implementations for the SE217 Object-Oriented Programming laboratory.
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=400&size=15&duration=2800&pause=1500&color=C7D2FE&width=560&height=64&repeat=true&multiline=true&lines=Java+programs+and+practical+implementations;for+the+SE217+Object-Oriented+Programming+laboratory." alt="Java programs and practical implementations for the SE217 Object-Oriented Programming laboratory." />
 
 <img src="https://img.shields.io/badge/Java-05070F?style=flat-square&logo=openjdk&logoColor=white" alt="Java" />
 
@@ -182,7 +176,7 @@ Java programs and practical implementations for the SE217 Object-Oriented Progra
 
 <!-- ===================== CONNECT ===================== -->
 
-## 🌐 Connect With Me
+## <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=26&duration=2500&pause=2000&color=00E5FF&width=340&height=45&vCenter=true&repeat=true&lines=%F0%9F%8C%90+Connect+With+Me" alt="🌐 Connect With Me" />
 
 <div align="center">
 
@@ -201,7 +195,7 @@ Java programs and practical implementations for the SE217 Object-Oriented Progra
 
 <div align="center">
 
-<sub><code>while (alive) { learn(); code(); build(); improve(); }</code></sub>
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=14&duration=3000&pause=2000&color=00E5FF&center=true&width=520&height=30&vCenter=true&repeat=true&separator=%7C&lines=while+%28alive%29+%7B+learn%28%29%3B+code%28%29%3B+build%28%29%3B+improve%28%29%3B+%7D" alt="while (alive) { learn(); code(); build(); improve(); }" />
 
 <br/><br/>
 
