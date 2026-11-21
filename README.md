@@ -40,7 +40,9 @@
 </div>
 <!-- ===================== TECH STACK ===================== -->
 
-## 🛠️ Technologies & Tools
+<h2>
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=26&duration=2500&pause=1000&color=E6EDF3&vCenter=true&width=500&lines=%F0%9F%9B%A0%EF%B8%8F+Technologies+%26+Tools" alt="Technologies & Tools" />
+</h2>
 
 <sub>My technology stack and learning interests. Icons do not represent proficiency levels.</sub>
 
