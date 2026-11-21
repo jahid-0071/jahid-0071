@@ -17,10 +17,10 @@
     </filter>
     <style>
       .mono { font-family: 'Courier New', Consolas, 'Liberation Mono', monospace; }
-      .command { fill: #5FFF87; font-size: 19px; font-weight: bold; }
-      .output { fill: #E2E8F0; font-size: 17px; }
-      .muted { fill: #94A3B8; font-size: 15px; }
-      .accent { fill: #A78BFA; }
+    .command { fill: #5FFF87; font-size: 28px; font-weight: bold; }
+.output { fill: #E2E8F0; font-size: 26px; }
+.muted { fill: #94A3B8; font-size: 25px; }
+.rn { font: 24px 'Courier New', Consolas, monospace; }
       .line {
         opacity: 0;
         animation: appear .5s ease forwards;
