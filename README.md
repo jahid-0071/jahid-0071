@@ -3,7 +3,7 @@
 
 <div align="center">
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:05070F,45:0B2A6F,100:6D28D9&height=230&section=header&text=Jahid%20Hasan&fontSize=54&fontColor=00E5FF&fontAlignY=38&animation=fadeIn&desc=Competitive%20Programmer%20%7C%20Software%20Engineering%20Student&descSize=18&descColor=C7D2FE&descAlignY=60" alt="Jahid Hasan banner" />
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:05070F,45:0B2A6F,100:6D28D9&height=230&section=header&text=Jahid%20Hasan&fontSize=54&fontColor=00E5FF&fontAlignY=38&animation=fadeIn&desc=Competitive%20Programmer%20%7C%20Software%20Engineering%20Student&descSize=18&descColor=C7D2FE&descAlignY=60" alt="Md.Jahid Hasan banner" />
 
 <a href="https://github.com/jahid-0071">
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=1200&color=00E5FF&center=true&vCenter=true&width=720&height=50&lines=Competitive+Programmer;Software+Engineering+Student;Problem+Solver;Exploring+AI+%26+Cybersecurity;Learning.+Building.+Improving." alt="Typing animation" />
