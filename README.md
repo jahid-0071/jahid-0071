@@ -178,19 +178,17 @@ Artificial Intelligence • Machine Learning • Cybersecurity • Software Engi
 
 <!-- ===================== CONTRIBUTION SNAKE ===================== -->
 
+
 ## 🐍 Contribution Snake
 
-<div align="center">
+<p align="center">
+  <img src="https://raw.githubusercontent.com/jahid-0071/jahid-0071/output/github-snake.svg" alt="GitHub Contribution Snake" />
+</p>
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="output/github-snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="output/github-snake.svg" />
-  <img alt="GitHub contribution snake animation" src="output/github-snake-dark.svg" />
-</picture>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/jahid-0071/jahid-0071/output/github-snake-dark.svg" alt="GitHub Contribution Snake Dark" />
+</p>
 
-</div>
-
-<br/>
 
 <!-- ===================== FEATURED PROJECTS ===================== -->
 
